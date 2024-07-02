@@ -184,7 +184,7 @@ yarn-error.log*
 
 # Gatsby files
 .cache/
-public/
+/public/
 
 # Comment the next line if you are not using Docker
 docker-compose.override.yml
