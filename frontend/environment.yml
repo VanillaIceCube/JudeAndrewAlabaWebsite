@@ -1,0 +1,7 @@
+name: JudeAndrewAlabaWebsite-Frontend
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - nodejs=20.12.2=h57928b3_0
+prefix: C:\Users\judea\anaconda3\envs\JudeAndrewAlabaWebsite-Frontend
