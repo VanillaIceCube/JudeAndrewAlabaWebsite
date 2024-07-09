@@ -1,25 +1,26 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-    return (
-        <Router>
-            <Switch>
-                {/* Define your routes */}
-                <Route exact path="/" component={YourComponent} />
-                <Route path="/your-other-path" component={YourOtherComponent} />
-                
-                {/* This Route will not render anything, it will just redirect to the Django admin URL */}
-                <Route path="/admin" component={() => {
-                    window.location.href = "/admin";
-                    return null;
-                }} />
-
-                {/* Catch-all route */}
-                <Route component={YourComponent} />
-            </Switch>
-        </Router>
-    );
+  console.log("Hello World")
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
