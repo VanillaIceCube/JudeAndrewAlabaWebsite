@@ -48,17 +48,18 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
 ]
 
+
 CORS_ALLOWED_ORIGINS = [
-    "https://jude-andrew-alaba-peaab.ondigitalocean.app/",
+    "https://jude-andrew-alaba-peaab.ondigitalocean.app",
 ]
 
 ROOT_URLCONF = "backend.urls"
