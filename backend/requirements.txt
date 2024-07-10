@@ -5,8 +5,9 @@ django-cors-headers==4.4.0
 gunicorn==22.0.0
 packaging==24.1
 psycopg2==2.9.9
+python-dotenv==1.0.1
 setuptools==69.5.1
-sqlparse==0.5.0
+sqlparse @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/sqlparse_1699544474746/work
 typing_extensions==4.12.2
-tzdata==2024.1
+tzdata @ file:///croot/python-tzdata_1690578112552/work
 wheel==0.43.0
