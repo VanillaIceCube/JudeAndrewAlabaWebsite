@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
+  Routes,
   Route,
-  Switch,
   Link
 } from 'react-router-dom';
 import logo from './logo.svg';
@@ -56,10 +56,10 @@ function App() {
             </li>
           </ul>
         </nav>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </div>
     </Router>
   );
