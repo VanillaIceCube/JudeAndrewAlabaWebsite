@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://jude-andrew-alaba-peaab.ondigitalocean.app/frontend",  # Adjust this to match your frontend's origin
+    "https://jude-andrew-alaba-peaab.ondigitalocean.app/",
 ]
 
 ROOT_URLCONF = "backend.urls"
