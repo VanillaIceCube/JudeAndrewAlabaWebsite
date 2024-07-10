@@ -59,6 +59,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          {/* Catch-all route */}
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </Router>
