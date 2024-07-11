@@ -22,12 +22,12 @@ load_dotenv()
 DATABASE_URL = os.getenv('DATABASE_URL')
 print(f"DATABASE_URL: {DATABASE_URL}")
 
-if not DATABASE_URL:
-    raise Exception("DATABASE_URL environment variable not defined")
+# if not DATABASE_URL:
+#     raise Exception("DATABASE_URL environment variable not defined")
 
-DATABASES = {
-    'default': dj_database_url.parse(DATABASE_URL)
-}
+# DATABASES = {
+#     'default': dj_database_url.parse(DATABASE_URL)
+# }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
