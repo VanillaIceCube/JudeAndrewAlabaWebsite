@@ -7,8 +7,7 @@ function App() {
     <Router>
       <Routes>
         {/* Exclude /api routes */}
-        <Route path="/api/*" element={<div />} />
-        <Route path="/admin/*" element={<div />} />
+        <Route path="/*" element={<div />} />
         {/* Define other routes */}
         <Route path="/" element={<Home />} />
       </Routes>
