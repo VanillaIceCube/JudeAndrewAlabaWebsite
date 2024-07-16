@@ -6,7 +6,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname.startsWith('/admin')) {
+    if (location.pathname.startsWith('/api')) {
       window.location.href = location.pathname;
     }
   }, [location]);
