@@ -20,7 +20,3 @@ from django.urls import path
 urlpatterns = [
     path("api/admin/", admin.site.urls),
 ]
-
-# Debugging: Print the registered URL patterns
-for pattern in urlpatterns:
-    print(pattern)
