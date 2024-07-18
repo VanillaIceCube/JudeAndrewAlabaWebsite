@@ -1,2 +1,7 @@
 # JudeAndrewAlaba
-This is the repo that houses my first website
+My Personal Website!
+
+## Stack Info
+Frontend: React, Material UI
+Backend: Django
+Deployment: Digital Ocean
