@@ -8,7 +8,7 @@ html, body, #root {
   body {
     background: linear-gradient(120deg, #34495e, #3c3e4b, #34495e);
     background-size: 200% 200%;
-    animation: gradientAnimation 60s ease infinite;
+    animation: gradientAnimation 30s ease infinite;
     overflow: hidden;
   }
   

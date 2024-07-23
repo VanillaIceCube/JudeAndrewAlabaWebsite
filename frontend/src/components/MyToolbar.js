@@ -3,9 +3,9 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
+import RouteIcon from '@mui/icons-material/Route';
+import PersonIcon from '@mui/icons-material/Person';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import './MyToolbar.css';
 
 const MyToolbar = () => {
@@ -13,9 +13,9 @@ const MyToolbar = () => {
     <AppBar position="static" className="toolbar">
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-          <Button color="inherit" startIcon={<HomeIcon />} sx={{ mx: 1 }}>Home</Button>
-          <Button color="inherit" startIcon={<InfoIcon />} sx={{ mx: 1 }}>About</Button>
-          <Button color="inherit" startIcon={<ContactMailIcon />} sx={{ mx: 1 }}>Contact</Button>
+          <Button color="inherit" startIcon={<PersonIcon />} sx={{ mx: 1 }}>About me</Button>
+          <Button color="inherit" startIcon={<RouteIcon />} sx={{ mx: 1 }}>Data Engineering Project</Button>
+          <Button color="inherit" startIcon={<YouTubeIcon />} sx={{ mx: 1 }}>Factorio Rampant Pyanodon</Button>
         </Box>
       </Toolbar>
     </AppBar>
