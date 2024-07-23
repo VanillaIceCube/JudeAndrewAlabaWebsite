@@ -1,4 +1,3 @@
-// src/components/MyToolbar.js
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,10 +6,11 @@ import Box from '@mui/material/Box';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import './MyToolbar.css';
 
 const MyToolbar = () => {
   return (
-    <AppBar position="static" sx={{ background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)' }}>
+    <AppBar position="static" className="toolbar">
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
           <Button color="inherit" startIcon={<HomeIcon />} sx={{ mx: 1 }}>Home</Button>

@@ -1,0 +1,26 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  
+  body {
+    background: linear-gradient(120deg, #34495e, #3c3e4b, #34495e);
+    background-size: 200% 200%;
+    animation: gradientAnimation 60s ease infinite;
+    overflow: hidden;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

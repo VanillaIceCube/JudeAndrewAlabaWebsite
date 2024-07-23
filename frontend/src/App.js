@@ -1,17 +1,20 @@
-// src/App.js
+
 import React from 'react';
 import MyToolbar from './components/MyToolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import './App.css';
 
 const App = () => {
   return (
     <div>
+      <CssBaseline />
       <MyToolbar />
       <Container maxWidth="md" sx={{ mt: 4 }}>
-        <Paper elevation={3} sx={{ p: 4 }}>
+        <Paper elevation={3} sx={{ p: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
           <Typography variant="h4" gutterBottom>
             Welcome to My Website
           </Typography>
