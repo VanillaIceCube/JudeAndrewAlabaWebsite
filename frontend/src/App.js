@@ -1,11 +1,10 @@
-
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import MyToolbar from './components/MyToolbar';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
+import AboutMe from './pages/AboutMe';
+import DataEngineeringProject from './pages/DataEngineeringProject';
+import FactorioRampantPyanodon from './pages/FactorioRampantPyanodon';
 import './App.css';
 
 const App = () => {
@@ -13,21 +12,12 @@ const App = () => {
     <div>
       <CssBaseline />
       <MyToolbar />
-      <Container maxWidth="md" sx={{ mt: 4 }}>
-        <Paper elevation={3} sx={{ p: 4, backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
-          <Typography variant="h4" gutterBottom>
-            Welcome to My Website
-          </Typography>
-          <Typography variant="body1" paragraph>
-            This is a sample website using Material-UI. The toolbar at the top contains three buttons, each with an icon.
-          </Typography>
-          <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
-            <Typography variant="body1" sx={{ maxWidth: '600px', textAlign: 'center' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nibh eget suscipit tincidunt, nunc odio malesuada justo, non dapibus leo felis ut quam. Aliquam erat volutpat.
-            </Typography>
-          </Box>
-        </Paper>
-      </Container>
+      <Routes>
+        <Route path="/" element={<AboutMe />} />
+        <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/data-engineering-project" element={<DataEngineeringProject />} />
+        <Route path="/factorio-rampant-pyanodon" element={<FactorioRampantPyanodon />} />
+      </Routes>
     </div>
   );
 };
