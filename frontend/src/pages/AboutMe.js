@@ -17,13 +17,13 @@ const AboutMe = () => (
         <Grid item xs={12} sm={4}>
           <Avatar 
             alt="Profile Picture" 
-            src="https://via.placeholder.com/150" 
+            src="https://media.licdn.com/dms/image/D5603AQHQ4u6GR83ZSA/profile-displayphoto-shrink_200_200/0/1706633212465?e=1727913600&v=beta&t=ObBTdTUGC0fZ14X-aIjLnNWQ-kfKri7ailBwXYS_0WA" 
             sx={{ width: 150, height: 150, mb: 2, mx: 'auto' }} 
           />
         </Grid>
         <Grid item xs={12} sm={8}>
           <Typography variant="body1" gutterBottom>
-            Hello, I am [Your Name], a [Your Profession] from [Your City/Country]. I have a passion for [Your Passion] and enjoy spending my time [Your Hobbies].
+            Hello! My name is Jude Andrew Alaba, and I made this website. I'm not quite sure what to put here yet, but I do know that I would like to show, not tell.
           </Typography>
         </Grid>
       </Grid>
@@ -34,7 +34,7 @@ const AboutMe = () => (
         Biography
       </Typography>
       <Typography variant="body1" gutterBottom>
-        [Your Biography]
+        A long long time ago, in a country far away...
       </Typography>
       
       <Divider sx={{ my: 4 }} />
@@ -45,34 +45,21 @@ const AboutMe = () => (
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
         <Paper elevation={1} sx={{ p: 2, width: '45%' }}>
           <Typography variant="h6" gutterBottom>
-            Hobby 1
+            Volleyball
           </Typography>
           <Typography variant="body1">
-            [Description of Hobby 1]
+            Catch me on the Beach Sun/Wed!
           </Typography>
         </Paper>
         <Paper elevation={1} sx={{ p: 2, width: '45%' }}>
           <Typography variant="h6" gutterBottom>
-            Hobby 2
+            Snowboarding
           </Typography>
           <Typography variant="body1">
-            [Description of Hobby 2]
+            Catch me on the slopes hopefully at least every other weekend during the winter season!
           </Typography>
         </Paper>
-        {/* Add more hobby sections as needed */}
       </Box>
-      
-      <Divider sx={{ my: 4 }} />
-      
-      <Typography variant="h5" gutterBottom>
-        Contact Information
-      </Typography>
-      <Typography variant="body1" gutterBottom>
-        Email: [Your Email]
-      </Typography>
-      <Typography variant="body1" gutterBottom>
-        Phone: [Your Phone Number]
-      </Typography>
     </Paper>
   </Container>
 );
