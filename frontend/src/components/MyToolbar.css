@@ -14,4 +14,13 @@
   background: linear-gradient(45deg, #34495e 30%, #4f75a6 90%);
   background-size: 200% 200%;
   animation: toolbarAnimation 15s ease infinite;
-}  
+  position: relative;
+}
+
+.toolbar .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
