@@ -2,6 +2,6 @@
 My Personal Website!
 
 ## Stack Info
-Frontend: React, Material UI
-Backend: Django
-Deployment: Digital Ocean
+Frontend: React, Material UI<br>
+Backend: Django<br>
+Deployment: Digital Ocean<br>
