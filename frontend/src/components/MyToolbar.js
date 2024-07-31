@@ -13,7 +13,9 @@ const MyToolbar = () => {
   const buttonsRef = useRef([]);
 
   useEffect(() => {
-    const activeButton = buttonsRef.current.find(button => button && button.dataset.path === currentPath);
+    const activeButton = buttonsRef.current.find(
+      button => button && button.dataset.path === currentPath
+    );
     if (activeButton) {
       const { offsetLeft, offsetWidth } = activeButton;
       setUnderlineStyle({
