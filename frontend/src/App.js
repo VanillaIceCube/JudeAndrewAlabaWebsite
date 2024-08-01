@@ -13,7 +13,7 @@ const App = () => {
     <div>
       <CssBaseline />
       <MyToolbar />
-      <Box className="scroll-container">
+      <Box className="scroll-container" sx={{ pb: 4 }}>
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="/about-me" element={<AboutMe />} />
