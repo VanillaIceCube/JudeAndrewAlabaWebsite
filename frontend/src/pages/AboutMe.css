@@ -1,7 +1,7 @@
 .jude-text {
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
-  background: linear-gradient(to right, #080744, #ff4081);
+  background: linear-gradient(to right, #0300b1, #ff4081);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -39,4 +39,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.age-text {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.age-text:hover {
+  background: linear-gradient(to right, #0300b1, #ff4081);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

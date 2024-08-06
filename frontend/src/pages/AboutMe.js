@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import './AboutMe.css';
@@ -12,6 +12,51 @@ import './AboutMe.css';
 const AboutMe = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const [detailLevel, setDetailLevel] = useState(0);
+  const [ageDetails, setAgeDetails] = useState('');
+
+  useEffect(() => {
+    if (detailLevel >= 5) {
+      const interval = setInterval(() => {
+        setAgeDetails(calculateAgeDetails(detailLevel));
+      }, 100); // Update every 100ms for real-time display
+      return () => clearInterval(interval);
+    } else {
+      setAgeDetails(calculateAgeDetails(detailLevel));
+    }
+  }, [detailLevel]);
+
+  const handleAgeClick = () => {
+    setDetailLevel((prevLevel) => (prevLevel + 1) % 7);
+  };
+
+  const calculateAgeDetails = (detailLevel) => {
+    const birthDate = new Date(Date.UTC(1998, 6, 29, 7, 30)); // UTC time for 3:30 PM in UTC+8
+    const now = new Date();
+    const diff = now - birthDate;
+
+    const years = now.getUTCFullYear() - birthDate.getUTCFullYear();
+    const months = now.getUTCMonth() - birthDate.getUTCMonth();
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor(diff / (1000 * 60));
+    const seconds = Math.floor(diff / 1000);
+
+    switch (detailLevel) {
+      case 1:
+        return `${years} Years ${months} Months Old`;
+      case 2:
+        return `${years} Years ${months} Months ${days % 30} Days Old`;
+      case 3:
+        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours Old`;
+      case 4:
+        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours ${minutes % 60} Minutes Old`;
+      case 5:
+        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours ${minutes % 60} Minutes ${seconds % 60} Seconds Old`;
+      default:
+        return `${years} Years Old`;
+    }
+  };
 
   return (
     <Container maxWidth="md" sx={{ mt: 4 }}>
@@ -29,6 +74,22 @@ const AboutMe = () => {
             </Typography>
           </div>
         </div>
+
+        <Divider sx={{ my: { xs: 2, sm: 4 } }} />
+
+        <Box sx={{ display: 'inline-flex', alignItems: 'center' }}>
+          <Typography variant="h5" gutterBottom>I am&nbsp;</Typography>
+          <Typography 
+            variant="h5" 
+            gutterBottom
+            onClick={handleAgeClick}
+            className="age-text"
+            sx={{ cursor: 'pointer' }}
+          >
+            {ageDetails}
+          </Typography>
+          <Typography variant="h5" gutterBottom>!</Typography>
+        </Box>
 
         <Divider sx={{ my: { xs: 2, sm: 4 } }} />
 
