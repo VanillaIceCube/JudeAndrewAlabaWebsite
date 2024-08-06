@@ -27,32 +27,53 @@ const AboutMe = () => {
   }, [detailLevel]);
 
   const handleAgeClick = () => {
-    setDetailLevel((prevLevel) => (prevLevel + 1) % 6);
+    setDetailLevel((prevLevel) => (prevLevel + 1) % 7);
   };
 
   const calculateAgeDetails = (detailLevel) => {
-    const birthDate = new Date(Date.UTC(1998, 6, 29, 7, 30)); // UTC time for 3:30 PM in UTC+8
+    const birthDate = new Date(Date.UTC(1998, 6, 29, 7, 30)); // Corrected to July 29, 1998, 07:30 UTC
     const now = new Date();
-    const diff = now - birthDate;
-
-    const years = now.getUTCFullYear() - birthDate.getUTCFullYear();
-    const months = now.getUTCMonth() - birthDate.getUTCMonth();
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor(diff / (1000 * 60));
-    const seconds = Math.floor(diff / 1000);
+    
+    let years = now.getUTCFullYear() - birthDate.getUTCFullYear();
+    let months = now.getUTCMonth() - birthDate.getUTCMonth();
+    let days = now.getUTCDate() - birthDate.getUTCDate();
+    let hours = now.getUTCHours() - birthDate.getUTCHours();
+    let minutes = now.getUTCMinutes() - birthDate.getUTCMinutes();
+    let seconds = now.getUTCSeconds() - birthDate.getUTCSeconds();
+    
+    if (seconds < 0) {
+      seconds += 60;
+      minutes--;
+    }
+    if (minutes < 0) {
+      minutes += 60;
+      hours--;
+    }
+    if (hours < 0) {
+      hours += 24;
+      days--;
+    }
+    if (days < 0) {
+      months--;
+      const prevMonth = new Date(now.getUTCFullYear(), now.getUTCMonth(), 0);
+      days += prevMonth.getUTCDate();
+    }
+    if (months < 0) {
+      months += 12;
+      years--;
+    }
 
     switch (detailLevel) {
       case 1:
         return `${years} Years ${months} Months`;
       case 2:
-        return `${years} Years ${months} Months ${days % 30} Days`;
+        return `${years} Years ${months} Months ${days} Days`;
       case 3:
-        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours`;
+        return `${years} Years ${months} Months ${days} Days ${hours} Hours`;
       case 4:
-        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours ${minutes % 60} Minutes`;
+        return `${years} Years ${months} Months ${days} Days ${hours} Hours ${minutes} Minutes`;
       case 5:
-        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours ${minutes % 60} Minutes ${seconds % 60} Seconds`;
+        return `${years} Years ${months} Months ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
       default:
         return `${years} Years`;
     }
