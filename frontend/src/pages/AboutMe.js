@@ -27,7 +27,7 @@ const AboutMe = () => {
   }, [detailLevel]);
 
   const handleAgeClick = () => {
-    setDetailLevel((prevLevel) => (prevLevel + 1) % 7);
+    setDetailLevel((prevLevel) => (prevLevel + 1) % 6);
   };
 
   const calculateAgeDetails = (detailLevel) => {

@@ -47,9 +47,11 @@
 .age-text {
   cursor: pointer;
   transition: all 0.3s ease;
+  user-select: none;
 }
 
-.age-text:hover {
+.age-text:hover,
+.age-text:focus {
   background: linear-gradient(to right, #0300b1, #ff4081);
   background-clip: text;
   -webkit-background-clip: text;
