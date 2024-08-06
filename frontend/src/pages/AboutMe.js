@@ -106,6 +106,8 @@ const AboutMe = () => {
           >
             {ageDetails}
           </Box> old.
+          <br />
+          {/* Add some other things here it's a little awkward rn.. */}
         </Typography>
 
         <Divider sx={{ my: { xs: 2, sm: 4 } }} />
