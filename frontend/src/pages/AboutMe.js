@@ -105,7 +105,7 @@ const AboutMe = () => {
             className="age-text"
           >
             {ageDetails}
-          </Box> Old!
+          </Box> old.
         </Typography>
 
         <Divider sx={{ my: { xs: 2, sm: 4 } }} />
