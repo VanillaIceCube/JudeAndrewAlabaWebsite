@@ -5,7 +5,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: .2px rgb(0, 0, 0); /* Increased stroke */
+  -webkit-text-stroke: 0.2px rgb(0, 0, 0); /* Increased stroke */
   text-shadow: 12px 12px 24px rgba(0, 0, 0, 1); /* Increased shadow */
   position: absolute;
   top: 50%;
@@ -13,8 +13,6 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
-
 
 .image-container {
   position: relative;
@@ -50,6 +48,7 @@
 
 .age-text:hover {
   background: linear-gradient(to right, #0300b1, #ff4081);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

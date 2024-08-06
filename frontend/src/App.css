@@ -37,7 +37,6 @@ body {
 
 .scroll-container::-webkit-scrollbar-track {
   background: linear-gradient(120deg, #34495e, #3c3e4b, #34495e);
-  border-radius: 10px;
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
