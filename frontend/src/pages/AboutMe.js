@@ -44,17 +44,17 @@ const AboutMe = () => {
 
     switch (detailLevel) {
       case 1:
-        return `${years} Years ${months} Months Old`;
+        return `${years} Years ${months} Months`;
       case 2:
-        return `${years} Years ${months} Months ${days % 30} Days Old`;
+        return `${years} Years ${months} Months ${days % 30} Days`;
       case 3:
-        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours Old`;
+        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours`;
       case 4:
-        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours ${minutes % 60} Minutes Old`;
+        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours ${minutes % 60} Minutes`;
       case 5:
-        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours ${minutes % 60} Minutes ${seconds % 60} Seconds Old`;
+        return `${years} Years ${months} Months ${days % 30} Days ${hours % 24} Hours ${minutes % 60} Minutes ${seconds % 60} Seconds`;
       default:
-        return `${years} Years Old`;
+        return `${years} Years`;
     }
   };
 
@@ -77,19 +77,15 @@ const AboutMe = () => {
 
         <Divider sx={{ my: { xs: 2, sm: 4 } }} />
 
-        <Box sx={{ display: 'inline-flex', alignItems: 'center' }}>
-          <Typography variant="h5" gutterBottom>I am&nbsp;</Typography>
-          <Typography 
-            variant="h5" 
-            gutterBottom
-            onClick={handleAgeClick}
+        <Typography variant="h5" gutterBottom className="typography-text">
+          I am <Box
+            component="span" 
+            onClick={handleAgeClick} 
             className="age-text"
-            sx={{ cursor: 'pointer' }}
           >
             {ageDetails}
-          </Typography>
-          <Typography variant="h5" gutterBottom>!</Typography>
-        </Box>
+          </Box> Old!
+        </Typography>
 
         <Divider sx={{ my: { xs: 2, sm: 4 } }} />
 

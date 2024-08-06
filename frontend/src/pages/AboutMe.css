@@ -39,9 +39,12 @@
   align-items: center;
 }
 
-.age-text {
+.typography-text {
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
+}
+
+.age-text {
   cursor: pointer;
   transition: all 0.3s ease;
 }
