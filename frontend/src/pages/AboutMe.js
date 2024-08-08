@@ -116,7 +116,7 @@ const AboutMe = () => {
           Biography
         </Typography>
         <Typography variant="body1" gutterBottom>
-          A long long time ago, in a country far away...
+          A long long time ago, in a country far far away...
         </Typography>
 
         <Divider sx={{ my: { xs: 2, sm: 4 } }} />
