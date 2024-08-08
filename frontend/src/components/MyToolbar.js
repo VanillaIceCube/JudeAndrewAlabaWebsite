@@ -32,13 +32,14 @@ const MyToolbar = () => {
   };
 
   return (
-    <Box sx={{ width: '100%' }} className="toolbar">
+    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }} className="toolbar">
       <Tabs
         value={value}
         onChange={handleChange}
         textColor="inherit"
         variant="scrollable"
         scrollButtons="auto"
+        allowScrollButtonsMobile
         TabIndicatorProps={{ style: { backgroundColor: 'white' } }}
       >
         <Tab
