@@ -91,7 +91,7 @@ const AboutMe = () => {
               className="jude-text" 
               sx={{ fontSize: isSmallScreen ? '1.5rem' : '2rem' }}
             >
-              Hi! I'm Jude.
+              Hi! I'm Jude Andrew.
             </Typography>
           </div>
         </div>
