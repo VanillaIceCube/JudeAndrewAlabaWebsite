@@ -7,6 +7,9 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Carousel from 'react-material-ui-carousel';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import './AboutMe.css';
 
 const AboutMe = () => {
@@ -31,7 +34,7 @@ const AboutMe = () => {
   };
 
   const calculateAgeDetails = (detailLevel) => {
-    const birthDate = new Date(Date.UTC(1998, 6, 29, 7, 30)); // Corrected to July 29, 1998, 07:30 UTC
+    const birthDate = new Date(Date.UTC(1998, 6, 29, 7, 30));
     const now = new Date();
     
     let years = now.getUTCFullYear() - birthDate.getUTCFullYear();
@@ -79,6 +82,56 @@ const AboutMe = () => {
     }
   };
 
+  const carouselItems = [
+    {
+      title: "Sport?",
+      content: (
+        <Box>
+          <Typography variant="body1">
+            I can't deciede between Volleyball & Snowboarding!
+          </Typography>
+        </Box>
+      ),
+    },
+    {
+      title: "Food?",
+      content: (
+        <Box>
+          <Typography variant="body1">
+            Probably Poutine & Sushi!
+            My all time favorite Poutine is Ma Poule Mouillée in Montreal!
+          </Typography>
+        </Box>
+      ),
+    },
+    {
+      title: "Author?",
+      content: (
+        <Typography variant="body1">
+          Brandon Sanderson!
+
+          Favorite book so far is Yumi and the Nightmare Painter
+        </Typography>
+      ),
+    },
+    {
+      title: "Video Game?",
+      content: (
+        <Typography variant="body1">
+          Factorio!
+        </Typography>
+      ),
+    },
+    {
+      title: "Board Game?",
+      content: (
+        <Typography variant="body1">
+          Dominion!
+        </Typography>
+      ),
+    },
+  ];
+
   return (
     <Container maxWidth="md" sx={{ mt: 4 }}>
       <Paper elevation={3} sx={{ p: { xs: 2, sm: 4 }, backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
@@ -106,46 +159,35 @@ const AboutMe = () => {
           >
             {ageDetails}
           </Box> old.
-          <br />
-          {/* Add some other things here it's a little awkward rn.. */}
         </Typography>
 
         <Divider sx={{ my: { xs: 2, sm: 4 } }} />
 
         <Typography variant="h5" gutterBottom>
-          Biography
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          A long long time ago, in a country far far away...
+          What is my favorite...
         </Typography>
 
-        <Divider sx={{ my: { xs: 2, sm: 4 } }} />
-
-        <Typography variant="h5" gutterBottom>
-          Hobbies
-        </Typography>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            <Paper elevation={1} sx={{ p: 2 }}>
-              <Typography variant="h6" gutterBottom>
-                Volleyball
-              </Typography>
-              <Typography variant="body1">
-                Catch me on the Beach Sun/Wed!
-              </Typography>
+        <Carousel animation="slide">
+          {carouselItems.map((item, index) => (
+            <Paper key={index} elevation={2} sx={{ p: 2 }}>
+              <Grid container spacing={2} alignItems="center">
+                {item.icon && (
+                  <Grid item>
+                    <Box sx={{ fontSize: '2rem', color: theme.palette.primary.main }}>
+                      {item.icon}
+                    </Box>
+                  </Grid>
+                )}
+                <Grid item xs>
+                  <Typography variant="h6" gutterBottom>
+                    {item.title}
+                  </Typography>
+                  {item.content}
+                </Grid>
+              </Grid>
             </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Paper elevation={1} sx={{ p: 2 }}>
-              <Typography variant="h6" gutterBottom>
-                Snowboarding
-              </Typography>
-              <Typography variant="body1">
-                Catch me on the slopes hopefully at least every other weekend during the winter season!
-              </Typography>
-            </Paper>
-          </Grid>
-        </Grid>
+          ))}
+        </Carousel>
       </Paper>
     </Container>
   );
