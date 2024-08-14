@@ -57,3 +57,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.carousel-paper {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-icon {
+  font-size: 2rem;
+  color: linear-gradient(to right, #0300b1, #ff4081);
+}
+
+.carousel-nav-buttons {
+  background-color: linear-gradient(to right, #0300b1, #ff4081);
+  border-radius: 0;
+}

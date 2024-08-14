@@ -10,6 +10,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Carousel from 'react-material-ui-carousel';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
+import BoardGameIcon from '@mui/icons-material/Casino';
 import './AboutMe.css';
 
 const AboutMe = () => {
@@ -85,27 +90,30 @@ const AboutMe = () => {
   const carouselItems = [
     {
       title: "Sport?",
+      icon: <SportsVolleyballIcon className="carousel-icon" />,
       content: (
         <Box>
           <Typography variant="body1">
-            I can't deciede between Volleyball & Snowboarding!
+            I can't decide between Volleyball & Snowboarding!
           </Typography>
         </Box>
       ),
     },
     {
       title: "Food?",
+      icon: <FastfoodIcon className="carousel-icon" />,
       content: (
         <Box>
           <Typography variant="body1">
             Probably Poutine & Sushi!
-            My all time favorite Poutine is Ma Poule Mouillée in Montreal!
+            My all-time favorite Poutine is Ma Poule Mouillée in Montreal!
           </Typography>
         </Box>
       ),
     },
     {
       title: "Author?",
+      icon: <MenuBookIcon className="carousel-icon" />,
       content: (
         <Typography variant="body1">
           Brandon Sanderson!
@@ -116,6 +124,7 @@ const AboutMe = () => {
     },
     {
       title: "Video Game?",
+      icon: <VideogameAssetIcon className="carousel-icon" />,
       content: (
         <Typography variant="body1">
           Factorio!
@@ -124,6 +133,7 @@ const AboutMe = () => {
     },
     {
       title: "Board Game?",
+      icon: <BoardGameIcon className="carousel-icon" />,
       content: (
         <Typography variant="body1">
           Dominion!
@@ -169,11 +179,11 @@ const AboutMe = () => {
 
         <Carousel animation="slide">
           {carouselItems.map((item, index) => (
-            <Paper key={index} elevation={2} sx={{ p: 2 }}>
+            <Paper key={index} elevation={2} className="carousel-paper">
               <Grid container spacing={2} alignItems="center">
                 {item.icon && (
                   <Grid item>
-                    <Box sx={{ fontSize: '2rem', color: theme.palette.primary.main }}>
+                    <Box>
                       {item.icon}
                     </Box>
                   </Grid>
