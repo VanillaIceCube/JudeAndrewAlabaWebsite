@@ -40,7 +40,8 @@ const MyToolbar = () => {
         variant="scrollable"
         scrollButtons="auto"
         allowScrollButtonsMobile
-        TabIndicatorProps={{ style: { backgroundColor: 'white' } }}
+        TabIndicatorProps={{ style: { backgroundColor: 'white', height: '2px' } }}
+        className="tabs"
       >
         <Tab
           label="About me"
@@ -48,6 +49,7 @@ const MyToolbar = () => {
           to="/about-me"
           icon={<PersonIcon />}
           iconPosition="start"
+          className="tab"
         />
         <Tab
           label="Data Engineering Project"
@@ -55,6 +57,7 @@ const MyToolbar = () => {
           to="/data-engineering-project"
           icon={<RouteIcon />}
           iconPosition="start"
+          className="tab"
         />
         <Tab
           label="Factorio Rampant Pyanodon"
@@ -62,6 +65,7 @@ const MyToolbar = () => {
           to="/factorio-rampant-pyanodon"
           icon={<YouTubeIcon />}
           iconPosition="start"
+          className="tab"
         />
       </Tabs>
     </Box>

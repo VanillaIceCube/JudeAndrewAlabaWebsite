@@ -6,7 +6,7 @@ import sys
 import os
 
 
-load_dotenv()
+load_dotenv() 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
