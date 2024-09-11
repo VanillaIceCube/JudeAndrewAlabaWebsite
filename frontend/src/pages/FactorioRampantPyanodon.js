@@ -1,7 +1,6 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
@@ -26,7 +25,6 @@ const FactorioRampantPyanodon = () => (
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/XCvq1H2OVWs?si=1U_alQOuaZOev2ap"
-          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}

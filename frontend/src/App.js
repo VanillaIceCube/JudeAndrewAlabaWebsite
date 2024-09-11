@@ -4,7 +4,6 @@ import MyToolbar from './components/MyToolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import AboutMe from './pages/AboutMe';
-import DataEngineeringProject from './pages/DataEngineeringProject';
 import FactorioRampantPyanodon from './pages/FactorioRampantPyanodon';
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/about-me" replace />} />
           <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/data-engineering-project" element={<DataEngineeringProject />} />
           <Route path="/factorio-rampant-pyanodon" element={<FactorioRampantPyanodon />} />
         </Routes>
       </Box>
