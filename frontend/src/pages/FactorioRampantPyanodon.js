@@ -17,14 +17,13 @@ const FactorioRampantPyanodon = () => (
         </Link>.
       </Typography>
       <Typography variant="body1" gutterBottom>
-        Here's my latest basetour episode!
+        Here's my latest base tour episode! <br />
+        Thanks for the view!
       </Typography>
       <Box sx={{ mt: 4, position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
         <iframe
           title="Factorio Rampant Pyanodon Video"
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/XCvq1H2OVWs?si=1U_alQOuaZOev2ap"
+          src="https://www.youtube.com/embed/XCvq1H2OVWs?autoplay=1&mute=1&si=1U_alQOuaZOev2ap"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
