@@ -7,7 +7,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 const tabData = [
   { label: 'About me', path: '/about-me', icon: <PersonIcon /> },
-  { label: 'Data Engineering Project', path: '/data-engineering-project', icon: <RouteIcon /> },
   { label: 'Factorio Rampant Pyanodon', path: '/factorio-rampant-pyanodon', icon: <YouTubeIcon /> },
 ];
 
