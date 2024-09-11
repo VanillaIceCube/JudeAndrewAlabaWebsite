@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import AboutMe from './pages/AboutMe';
 import DataEngineeringProject from './pages/DataEngineeringProject';
 import FactorioRampantPyanodon from './pages/FactorioRampantPyanodon';
-import './App.css';
 
 const App = () => {
   return (

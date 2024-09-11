@@ -4,35 +4,26 @@ import RouteIcon from '@mui/icons-material/Route';
 import PersonIcon from '@mui/icons-material/Person';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link, useLocation } from 'react-router-dom';
-import './MyToolbar.css';
+
+const tabData = [
+  { label: 'About me', path: '/about-me', icon: <PersonIcon /> },
+  { label: 'Data Engineering Project', path: '/data-engineering-project', icon: <RouteIcon /> },
+  { label: 'Factorio Rampant Pyanodon', path: '/factorio-rampant-pyanodon', icon: <YouTubeIcon /> },
+];
 
 const MyToolbar = () => {
   const location = useLocation();
-  const currentPath = location.pathname;
-  const [value, setValue] = useState(false);
+  const [value, setValue] = useState(0);
 
   useEffect(() => {
-    switch (currentPath) {
-      case '/about-me':
-        setValue(0);
-        break;
-      case '/data-engineering-project':
-        setValue(1);
-        break;
-      case '/factorio-rampant-pyanodon':
-        setValue(2);
-        break;
-      default:
-        setValue(false);
-    }
-  }, [currentPath]);
+    const currentTab = tabData.findIndex(tab => tab.path === location.pathname);
+    setValue(currentTab === -1 ? 0 : currentTab);
+  }, [location.pathname]);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const handleChange = (_, newValue) => setValue(newValue);
 
   return (
-    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }} className="toolbar">
+    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -41,32 +32,17 @@ const MyToolbar = () => {
         scrollButtons="auto"
         allowScrollButtonsMobile
         TabIndicatorProps={{ style: { backgroundColor: 'white', height: '2px' } }}
-        className="tabs"
       >
-        <Tab
-          label="About me"
-          component={Link}
-          to="/about-me"
-          icon={<PersonIcon />}
-          iconPosition="start"
-          className="tab"
-        />
-        <Tab
-          label="Data Engineering Project"
-          component={Link}
-          to="/data-engineering-project"
-          icon={<RouteIcon />}
-          iconPosition="start"
-          className="tab"
-        />
-        <Tab
-          label="Factorio Rampant Pyanodon"
-          component={Link}
-          to="/factorio-rampant-pyanodon"
-          icon={<YouTubeIcon />}
-          iconPosition="start"
-          className="tab"
-        />
+        {tabData.map((tab, index) => (
+          <Tab
+            key={index}
+            label={tab.label}
+            component={Link}
+            to={tab.path}
+            icon={tab.icon}
+            iconPosition="start"
+          />
+        ))}
       </Tabs>
     </Box>
   );
