@@ -1,0 +1,58 @@
+name: CI with Conda
+
+on:
+  # This workflow will run on any push or pull request to the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v3
+
+    # Install Miniconda
+    - name: Set up Miniconda
+      uses: goanpeca/setup-miniconda@v1
+      with:
+        auto-update-conda: true
+        activate-environment: base
+        miniconda-version: latest
+
+    # Create Conda environment from environment.yml
+    - name: Create Conda environment
+      run: conda env create -f environment.yml
+
+    # Activate the Conda environment
+    - name: Activate Conda environment
+      run: echo "source activate $(head -n 1 environment.yml | cut -d' ' -f2)" >> $GITHUB_ENV
+
+    # Generate requirements.txt from the Conda environment
+    - name: Generate requirements.txt
+      run: |
+        conda list --export | grep -v "@" | grep -v "conda" > requirements.txt
+        # Optional: Show the generated requirements.txt for verification
+        cat requirements.txt
+
+    # Push updated requirements.txt back to the repository (optional)
+    - name: Commit and push requirements.txt
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git add requirements.txt
+        git commit -m "Automatically update requirements.txt"
+        git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Run tests (optional)
+    - name: Run tests
+      run: |
+        source activate $(head -n 1 environment.yml | cut -d' ' -f2)
+        pytest  # Replace with your test command
