@@ -8,7 +8,7 @@ const AboutMe = () => (
       Hello, I am Jude
     </Typography>
     <Typography variant="body1" sx={{ mt: 2, color: 'text.secondary' }}> {/* Lighter text color for body */}
-      I am a developer, gamer, and content creator. Explore my latest projects and content!
+      These are words that describe me
     </Typography>
   </Container>
 );

@@ -8,7 +8,8 @@ import Divider from '@mui/material/Divider';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import PatreonIcon from '@mui/icons-material/MonetizationOn'; // Placeholder icon for Patreon
+import DiscordIcon from '@mui/icons-material/Chat'; // Placeholder icon for Discord
 
 const FactorioRampantPyanodon = () => (
   <Container maxWidth="md" sx={{ mt: 4 }}>
@@ -29,9 +30,6 @@ const FactorioRampantPyanodon = () => (
     <Typography variant="h5" gutterBottom>
       My Latest Base Tour
     </Typography>
-    <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
-      Watch the latest tour of my base. And don't forget to subscribe!
-    </Typography>
 
     <Box sx={{ mt: 4, position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px' }}>
       <iframe
@@ -45,6 +43,9 @@ const FactorioRampantPyanodon = () => (
     <Divider sx={{ my: 4 }} />
 
     {/* Mod Author and Modpack Section */}
+    <Typography variant="h5" gutterBottom sx={{ mb: 4 }}>
+      Modpacks
+    </Typography>
     <Grid container spacing={4}>
       <Grid item xs={12} sm={6}>
         <Card>
@@ -64,7 +65,6 @@ const FactorioRampantPyanodon = () => (
               <strong>Author:</strong> Pyanodon <br />
               This modpack adds deep resource management and advanced factory complexity, perfect for experienced Factorio players.
             </Typography>
-            
           </CardContent>
         </Card>
       </Grid>
@@ -87,20 +87,44 @@ const FactorioRampantPyanodon = () => (
               <strong>Author:</strong> Veden <br />
               The Rampant mod brings smarter, evolving enemies and makes base defense much more challenging with enhanced AI.
             </Typography>
-
           </CardContent>
         </Card>
       </Grid>
     </Grid>
     <Divider sx={{ my: 4 }} />
 
-    {/* Call to Action */}
-    <Typography variant="h5" gutterBottom sx={{ mt: 4 }}>
-      Subscribe for More
+    {/* Social Links Section */}
+    <Box>
+    <Typography variant="h5" gutterBottom sx={{ mb: 4 }}>
+      Join me
     </Typography>
-    <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-      Don't miss future gameplay tips and base tours—subscribe to my YouTube channel today!
-    </Typography>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={4}>
+          <Card sx={{ display: 'flex', alignItems: 'center', padding: 2 }}>
+            <YouTubeIcon sx={{ fontSize: 40, color: 'red', mr: 2 }} />
+            <Link href="https://www.youtube.com/@VanillaIceCube" target="_blank" rel="noopener noreferrer" sx={{ fontWeight: 'bold', color: 'secondary.main' }}>
+              YouTube
+            </Link>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Card sx={{ display: 'flex', alignItems: 'center', padding: 2 }}>
+            <PatreonIcon sx={{ fontSize: 40, color: '#f96854', mr: 2 }} />
+            <Link href="https://www.patreon.com/VanillaIceCube" target="_blank" rel="noopener noreferrer" sx={{ fontWeight: 'bold', color: 'secondary.main' }}>
+              Patreon
+            </Link>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Card sx={{ display: 'flex', alignItems: 'center', padding: 2 }}>
+            <DiscordIcon sx={{ fontSize: 40, color: '#7289da', mr: 2 }} />
+            <Link href="https://discord.gg/9fRqhzTT" target="_blank" rel="noopener noreferrer" sx={{ fontWeight: 'bold', color: 'secondary.main' }}>
+              Discord
+            </Link>
+          </Card>
+        </Grid>
+      </Grid>
+    </Box>
   </Container>
 );
 
