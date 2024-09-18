@@ -8,8 +8,11 @@ import Divider from '@mui/material/Divider';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import PatreonIcon from '@mui/icons-material/MonetizationOn'; // Placeholder icon for Patreon
-import DiscordIcon from '@mui/icons-material/Chat'; // Placeholder icon for Discord
+import PatreonIcon from '@mui/icons-material/MonetizationOn';
+import DiscordIcon from '@mui/icons-material/Chat';
+import SettingsIcon from '@mui/icons-material/Settings';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import GrainIcon from '@mui/icons-material/Grain';  // Example of sand-like particles
 
 const FactorioRampantPyanodon = () => (
   <Container maxWidth="md" sx={{ mt: 4 }}>
@@ -19,11 +22,85 @@ const FactorioRampantPyanodon = () => (
     </Typography>
     <Divider sx={{ my: 4 }} />
 
-    {/* Introduction/Description */}
-    <Typography variant="body1" sx={{ mt: 2, color: 'text.secondary' }}>
-      Factorio is my all-time favorite game. It's a factory builder that focuses on resource management and logistics. <br />
-      I'm currently playing with two of my favorite modpacks, which increase the complexity, difficulty, and length of the game.
+    {/* Enhanced Introduction with Modpack Descriptions */}
+    <Typography variant="h5" gutterBottom sx={{ mb: 4 }}>
+      What the heck is even that?
     </Typography>
+
+    <Grid container spacing={4}>
+      <Grid item xs={12} sm={4}>
+        <Card sx={{ height: '100%' }}>
+          <CardContent>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <SettingsIcon sx={{ fontSize: 40, color: 'white' }} /> {/* Gear Icon */}
+              <Link
+                variant="h6"
+                href="https://www.factorio.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: 'secondary.main' }}
+              >
+                Factorio
+              </Link>
+            </Box>
+            <Divider sx={{ my: 2 }} />
+            <Typography variant="body2" color="text.secondary">
+              <strong>Studio:</strong> Wube <br />
+              Factorio is my all-time favorite game! It's a factory-building game focused on resource management, logistics, and automation.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+
+      <Grid item xs={12} sm={4}>
+        <Card sx={{ height: '100%' }}>
+          <CardContent>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <BugReportIcon sx={{ fontSize: 40, color: 'white' }} /> {/* Insect Icon */}
+              <Link
+                variant="h6"
+                href="https://mods.factorio.com/mod/Rampant"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: 'secondary.main' }}
+              >
+                Rampant
+              </Link>
+            </Box>
+            <Divider sx={{ my: 2 }} />
+            <Typography variant="body2" color="text.secondary">
+              <strong>Author:</strong> Veden <br />
+              Rampant enhances enemy AI, making them smarter and more aggressive. It creates a greater challenge for defending your base.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+
+      <Grid item xs={12} sm={4}>
+        <Card sx={{ height: '100%' }}>
+          <CardContent>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <GrainIcon sx={{ fontSize: 40, color: 'white' }} /> {/* Ash Icon */}
+              <Link
+                variant="h6"
+                href="https://mods.factorio.com/user/pyanodon"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: 'secondary.main' }}
+              >
+                Pyanodon
+              </Link>
+            </Box>
+            <Divider sx={{ my: 2 }} />
+            <Typography variant="body2" color="text.secondary">
+              <strong>Author:</strong> Pyanodon <br />
+              This modpack adds deep resource management and advanced factory complexity, perfect for experienced Factorio players.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
+
     <Divider sx={{ my: 4 }} />
 
     {/* Featured Video */}
@@ -42,62 +119,11 @@ const FactorioRampantPyanodon = () => (
     </Box>
     <Divider sx={{ my: 4 }} />
 
-    {/* Mod Author and Modpack Section */}
-    <Typography variant="h5" gutterBottom sx={{ mb: 4 }}>
-      Modpacks
-    </Typography>
-    <Grid container spacing={4}>
-      <Grid item xs={12} sm={6}>
-        <Card>
-          <CardContent>
-            <Link
-              variant="h6"
-              gutterBottom
-              href="https://mods.factorio.com/user/pyanodon"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ mt: 2, display: 'block', color: 'secondary.main' }}
-            >
-              Pyanodons Modpack
-            </Link>
-            <Divider sx={{ my: 2 }} />
-            <Typography variant="body2" color="text.secondary">
-              <strong>Author:</strong> Pyanodon <br />
-              This modpack adds deep resource management and advanced factory complexity, perfect for experienced Factorio players.
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-
-      <Grid item xs={12} sm={6}>
-        <Card>
-          <CardContent>
-            <Link
-              variant="h6"
-              gutterBottom
-              href="https://mods.factorio.com/user/Veden"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ mt: 2, display: 'block', color: 'secondary.main' }}
-            >
-              Rampant Modpack
-            </Link>
-            <Divider sx={{ my: 2 }} />
-            <Typography variant="body2" color="text.secondary">
-              <strong>Author:</strong> Veden <br />
-              The Rampant mod brings smarter, evolving enemies and makes base defense much more challenging with enhanced AI.
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-    </Grid>
-    <Divider sx={{ my: 4 }} />
-
     {/* Social Links Section */}
     <Box>
-    <Typography variant="h5" gutterBottom sx={{ mb: 4 }}>
-      Join me
-    </Typography>
+      <Typography variant="h5" gutterBottom sx={{ mb: 4 }}>
+        Join me
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4}>
           <Card sx={{ display: 'flex', alignItems: 'center', padding: 2 }}>
