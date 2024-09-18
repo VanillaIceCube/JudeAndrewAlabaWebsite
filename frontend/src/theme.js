@@ -44,9 +44,11 @@ const theme = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
-          textTransform: 'none',
+          textTransform: 'none', // Don't uppercase the text
           fontWeight: '500',
           color: '#e0e0e0', // Text color for tabs
+          minHeight: '36px', // Adjust tab height (default is usually 48px)
+          padding: '12px 16px', // Reduce padding for a thinner appearance
           '&.Mui-selected': {
             color: '#76c893', // Active tab color
           },
