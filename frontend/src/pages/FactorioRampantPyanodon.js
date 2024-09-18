@@ -20,26 +20,17 @@ const FactorioRampantPyanodon = () => (
 
     {/* Introduction/Description */}
     <Typography variant="body1" sx={{ mt: 2, color: 'text.secondary' }}>
-      Factorio Rampant Pyanodon is a hardcore mod pack for Factorio that introduces incredibly complex and intricate factory setups.
-      Dive into my series where I explore the depths of this mod, share tips, and showcase my insane base creations!
-    </Typography>
-
-    {/* Link to YouTube */}
-    <Typography variant="body1" sx={{ mt: 2, color: 'text.secondary' }}>
-      Check out my{' '}
-      <Link href="https://www.youtube.com/@VanillaIceCube" target="_blank" rel="noopener noreferrer" sx={{ color: 'secondary.main' }}>
-        YouTube channel <YouTubeIcon sx={{ verticalAlign: 'middle' }} />
-      </Link>{' '}
-      for more content.
+      Factorio is my all-time favorite game. It's a factory builder that focuses on resource management and logistics. <br />
+      I'm currently playing with two of my favorite modpacks, which increase the complexity, difficulty, and length of the game.
     </Typography>
     <Divider sx={{ my: 4 }} />
 
     {/* Featured Video */}
     <Typography variant="h5" gutterBottom>
-      Featured Video: My Latest Base Tour
+      My Latest Base Tour
     </Typography>
     <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
-      Watch the latest episode where I tour my latest insane base. Don't forget to subscribe!
+      Watch the latest tour of my base. And don't forget to subscribe!
     </Typography>
 
     <Box sx={{ mt: 4, position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px' }}>
@@ -53,45 +44,62 @@ const FactorioRampantPyanodon = () => (
     </Box>
     <Divider sx={{ my: 4 }} />
 
-    {/* Feature Highlights */}
-    <Typography variant="h5" gutterBottom>
-      What You’ll Learn:
-    </Typography>
-    <Grid container spacing={2} sx={{ mt: 2 }}>
+    {/* Mod Author and Modpack Section */}
+    <Grid container spacing={4}>
       <Grid item xs={12} sm={6}>
-        <Card sx={{ height: '100%' }}>
+        <Card>
           <CardContent>
-            <CheckCircleIcon color="secondary" sx={{ fontSize: 40 }} />
-            <Typography variant="h6" sx={{ mt: 2 }}>
-              Complex Factory Designs
-            </Typography>
+            <Link
+              variant="h6"
+              gutterBottom
+              href="https://mods.factorio.com/user/pyanodon"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ mt: 2, display: 'block', color: 'secondary.main' }}
+            >
+              Pyanodons Modpack
+            </Link>
+            <Divider sx={{ my: 2 }} />
             <Typography variant="body2" color="text.secondary">
-              Learn how to design factories that manage intricate modpack requirements.
+              <strong>Author:</strong> Pyanodon <br />
+              This modpack adds deep resource management and advanced factory complexity, perfect for experienced Factorio players.
             </Typography>
+            
           </CardContent>
         </Card>
       </Grid>
+
       <Grid item xs={12} sm={6}>
-        <Card sx={{ height: '100%' }}>
+        <Card>
           <CardContent>
-            <CheckCircleIcon color="secondary" sx={{ fontSize: 40 }} />
-            <Typography variant="h6" sx={{ mt: 2 }}>
-              Base Expansion Tips
-            </Typography>
+            <Link
+              variant="h6"
+              gutterBottom
+              href="https://mods.factorio.com/user/Veden"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ mt: 2, display: 'block', color: 'secondary.main' }}
+            >
+              Rampant Modpack
+            </Link>
+            <Divider sx={{ my: 2 }} />
             <Typography variant="body2" color="text.secondary">
-              Discover strategies for efficient base expansions in Pyanodon.
+              <strong>Author:</strong> Veden <br />
+              The Rampant mod brings smarter, evolving enemies and makes base defense much more challenging with enhanced AI.
             </Typography>
+
           </CardContent>
         </Card>
       </Grid>
     </Grid>
+    <Divider sx={{ my: 4 }} />
 
     {/* Call to Action */}
     <Typography variant="h5" gutterBottom sx={{ mt: 4 }}>
       Subscribe for More
     </Typography>
     <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-      Don't miss out on future tutorials, base tours, and gameplay tips. Make sure to subscribe to my YouTube channel and hit the bell icon!
+      Don't miss future gameplay tips and base tours—subscribe to my YouTube channel today!
     </Typography>
   </Container>
 );
