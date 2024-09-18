@@ -4,15 +4,17 @@ import PersonIcon from '@mui/icons-material/Person';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link, useLocation } from 'react-router-dom';
 
+// Define the tab data with icons and paths
 const tabData = [
   { label: 'About me', path: '/about-me', icon: <PersonIcon sx={{ color: '#76c893' }} /> },
   { label: 'Factorio Rampant Pyanodon', path: '/factorio-rampant-pyanodon', icon: <YouTubeIcon sx={{ color: '#76c893' }} /> },
 ];
 
-const MyToolbar = () => {
+const MyTab = () => {
   const location = useLocation();
   const [value, setValue] = useState(0);
 
+  // Update the selected tab based on the current URL path
   useEffect(() => {
     const currentTab = tabData.findIndex(tab => tab.path === location.pathname);
     setValue(currentTab === -1 ? 0 : currentTab);
@@ -24,11 +26,11 @@ const MyToolbar = () => {
     <Box
       sx={{
         width: '100%',
-        bgcolor: '#1e1e1e', // Dark background
+        bgcolor: '#1e1e1e', // Dark background for the tabs bar
         display: 'flex',
         justifyContent: 'center',
         py: 1,
-        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)', // Soft shadow for subtle depth
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)', // Subtle shadow for depth
       }}
     >
       <Tabs
@@ -47,7 +49,7 @@ const MyToolbar = () => {
             to={tab.path}
             icon={tab.icon}
             iconPosition="start"
-            sx={{ color: 'text.primary', minWidth: 120, px: 2 }} // Consistent spacing for tabs
+            sx={{ color: 'text.primary', minWidth: 120, px: 2 }}
           />
         ))}
       </Tabs>
@@ -55,4 +57,4 @@ const MyToolbar = () => {
   );
 };
 
-export default MyToolbar;
+export default MyTab;

@@ -1,18 +1,18 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import MyToolbar from './components/MyToolbar';
+import CssBaseline from '@mui/material/CssBaseline'; // Optional but useful for global resets
+import theme from './theme';
+import MyTab from './components/MyTab';
 import AboutMe from './pages/AboutMe';
 import FactorioRampantPyanodon from './pages/FactorioRampantPyanodon';
-import theme from './theme';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Box from '@mui/material/Box';
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <MyToolbar />
+      <MyTab />
       <Box sx={{ pb: 4 }}>
         <Routes>
           <Route path="/" element={<Navigate to="/about-me" replace />} />

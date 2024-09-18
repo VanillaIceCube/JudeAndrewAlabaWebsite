@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 const AboutMe = () => (
-  <Container maxWidth="md" sx={{ mt: 8, textAlign: 'center' }}> {/* mt: 8 to avoid toolbar overlap */}
+  <Container maxWidth="md" sx={{ mt: 4, textAlign: 'center' }}>
     <Typography variant="h4" gutterBottom>
       Hello, I am Jude
     </Typography>

@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
 const FactorioRampantPyanodon = () => (
-  <Container maxWidth="md" sx={{ mt: 8 }}>  {/* mt: 8 to avoid toolbar overlap */}
+  <Container maxWidth="md" sx={{ mt: 4 }}>
     <Typography variant="h4" gutterBottom>
       Factorio Rampant Pyanodon
     </Typography>
