@@ -13,7 +13,7 @@ import PatreonIcon from '@mui/icons-material/MonetizationOn';
 import DiscordIcon from '@mui/icons-material/Chat';
 import SettingsIcon from '@mui/icons-material/Settings';
 import BugReportIcon from '@mui/icons-material/BugReport';
-import GrainIcon from '@mui/icons-material/Grain';  // Example of sand-like particles
+import GrainIcon from '@mui/icons-material/Grain';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 
@@ -35,7 +35,7 @@ const FactorioRampantPyanodon = () => (
         <Card sx={{ height: '100%' }}>
           <CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <SettingsIcon sx={{ fontSize: 40, color: 'white' }} /> {/* Gear Icon */}
+              <SettingsIcon sx={{ fontSize: 40, color: 'white' }} />
               <Link
                 variant="h6"
                 href="https://www.factorio.com/"
@@ -59,7 +59,7 @@ const FactorioRampantPyanodon = () => (
         <Card sx={{ height: '100%' }}>
           <CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <BugReportIcon sx={{ fontSize: 40, color: 'white' }} /> {/* Insect Icon */}
+              <BugReportIcon sx={{ fontSize: 40, color: 'white' }} />
               <Link
                 variant="h6"
                 href="https://mods.factorio.com/mod/Rampant"
@@ -83,7 +83,7 @@ const FactorioRampantPyanodon = () => (
         <Card sx={{ height: '100%' }}>
           <CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <GrainIcon sx={{ fontSize: 40, color: 'white' }} /> {/* Ash Icon */}
+              <GrainIcon sx={{ fontSize: 40, color: 'white' }} />
               <Link
                 variant="h6"
                 href="https://mods.factorio.com/user/pyanodon"
@@ -134,16 +134,16 @@ const FactorioRampantPyanodon = () => (
             href="https://www.youtube.com/playlist?list=PLSPpC7by7tCVuLvRoQJnITKEtCeFwnEt7" 
             target="_blank" 
             rel="noopener noreferrer"
-            sx={{ textDecoration: 'none' }}  // Remove underline
+            sx={{ textDecoration: 'none' }}
           >
             <CardMedia
               component="img"
               height="140"
-              image="https://img.youtube.com/vi/tqZ3PPLIIxM/hqdefault.jpg"  // Thumbnail for Season 01
+              image="https://img.youtube.com/vi/tqZ3PPLIIxM/hqdefault.jpg"
               alt="Season 01 Thumbnail"
             />
             <CardContent>
-              <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem'}}>  {/* Make text white */}
+              <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem'}}>
                 Season 01: Automation Science Packs
               </Typography>
             </CardContent>
@@ -158,16 +158,16 @@ const FactorioRampantPyanodon = () => (
             href="https://www.youtube.com/playlist?list=PLSPpC7by7tCXKwRy2CaG3ocvRNOqmkzfO" 
             target="_blank" 
             rel="noopener noreferrer"
-            sx={{ textDecoration: 'none' }}  // Remove underline
+            sx={{ textDecoration: 'none' }}
           >
             <CardMedia
               component="img"
               height="140"
-              image="https://img.youtube.com/vi/d38NufQInbs/hqdefault.jpg"  // Thumbnail for Season 02
+              image="https://img.youtube.com/vi/d38NufQInbs/hqdefault.jpg" 
               alt="Season 02 Thumbnail"
             />
             <CardContent>
-              <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem' }}>  {/* Make text white */}
+              <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem' }}>
                 Season 02: Simple Circuit Boards
               </Typography>
             </CardContent>
@@ -182,16 +182,16 @@ const FactorioRampantPyanodon = () => (
             href="https://www.youtube.com/playlist?list=PLSPpC7by7tCWMgArlzZTB7vINOeYP90H6" 
             target="_blank" 
             rel="noopener noreferrer"
-            sx={{ textDecoration: 'none' }}  // Remove underline
+            sx={{ textDecoration: 'none' }}
           >
             <CardMedia
               component="img"
               height="140"
-              image="https://img.youtube.com/vi/FW4LKXZ6j5g/hqdefault.jpg"  // Thumbnail for Season 03
+              image="https://img.youtube.com/vi/FW4LKXZ6j5g/hqdefault.jpg"
               alt="Season 03 Thumbnail"
             />
             <CardContent>
-              <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem' }}>  {/* Make text white */}
+              <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem' }}>
                 Season 03: Py Science 01
               </Typography>
             </CardContent>
@@ -206,16 +206,16 @@ const FactorioRampantPyanodon = () => (
             href="https://www.youtube.com/playlist?list=PLSPpC7by7tCXNX_suvs4SgaRGmT8wJUaE" 
             target="_blank" 
             rel="noopener noreferrer"
-            sx={{ textDecoration: 'none' }}  // Remove underline
+            sx={{ textDecoration: 'none' }}
           >
             <CardMedia
               component="img"
               height="140"
-              image="https://img.youtube.com/vi/XCvq1H2OVWs/hqdefault.jpg"  // Thumbnail for Season 04
+              image="https://img.youtube.com/vi/XCvq1H2OVWs/hqdefault.jpg"
               alt="Season 04 Thumbnail"
             />
             <CardContent>
-              <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem' }}>  {/* Make text white */}
+              <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem' }}>
                 Season 04: Intermetallics
               </Typography>
             </CardContent>
@@ -227,10 +227,10 @@ const FactorioRampantPyanodon = () => (
       <Grid item xs={12} sm={4}>
         <Card sx={{ height: '100%', backgroundColor: '#1e1e1e' }}>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 140, backgroundColor: '#333', color: 'white' }}>
-            <HelpOutlineIcon sx={{ fontSize: 60 }} />  {/* Question mark icon */}
+            <HelpOutlineIcon sx={{ fontSize: 60 }} />
           </Box>
           <CardContent>
-            <Typography variant="h6" sx={{ color: 'white', fontSize: '0.9rem', color: 'text.secondary'}}>
+            <Typography variant="h6" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
               Season 05: In Progress!
             </Typography>
           </CardContent>

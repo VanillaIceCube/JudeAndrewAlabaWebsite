@@ -2,20 +2,20 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark', // Dark mode
+    mode: 'dark', 
     primary: {
-      main: '#1e1e1e', // Dark gray background
+      main: '#1e1e1e',
     },
     secondary: {
-      main: '#76c893', // Muted green for accents
+      main: '#76c893',
     },
     background: {
-      default: '#121212', // Overall background color
-      paper: '#1e1e1e', // Card backgrounds
+      default: '#121212',
+      paper: '#1e1e1e',
     },
     text: {
-      primary: '#e0e0e0', // Light gray text
-      secondary: '#a0a0a0', // Subtle gray for secondary text
+      primary: '#e0e0e0',
+      secondary: '#a0a0a0',
     },
   },
   typography: {
@@ -23,11 +23,11 @@ const theme = createTheme({
     h4: {
       fontWeight: 600,
       fontSize: '2rem',
-      color: '#e0e0e0', // White-ish heading color
+      color: '#e0e0e0',
     },
     body1: {
       fontSize: '1rem',
-      color: '#b0b0b0', // Softer body text
+      color: '#b0b0b0',
     },
     button: {
       textTransform: 'none',
@@ -37,20 +37,20 @@ const theme = createTheme({
     MuiTabs: {
       styleOverrides: {
         indicator: {
-          backgroundColor: '#76c893', // Accent underline color for active tab
+          backgroundColor: '#76c893',
         },
       },
     },
     MuiTab: {
       styleOverrides: {
         root: {
-          textTransform: 'none', // Don't uppercase the text
+          textTransform: 'none',
           fontWeight: '500',
-          color: '#e0e0e0', // Text color for tabs
-          minHeight: '36px', // Adjust tab height (default is usually 48px)
-          padding: '12px 16px', // Reduce padding for a thinner appearance
+          color: '#e0e0e0',
+          minHeight: '36px',
+          padding: '12px 16px',
           '&.Mui-selected': {
-            color: '#76c893', // Active tab color
+            color: '#76c893',
           },
         },
       },

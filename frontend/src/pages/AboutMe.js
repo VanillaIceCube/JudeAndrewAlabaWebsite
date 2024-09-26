@@ -7,7 +7,7 @@ const AboutMe = () => (
     <Typography variant="h4" gutterBottom>
       Hello, I am Jude
     </Typography>
-    <Typography variant="body1" sx={{ mt: 2, color: 'text.secondary' }}> {/* Lighter text color for body */}
+    <Typography variant="body1" sx={{ mt: 2, color: 'text.secondary' }}>
       These are words that describe me
     </Typography>
   </Container>
