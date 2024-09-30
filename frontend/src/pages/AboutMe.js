@@ -77,10 +77,10 @@ const AboutMe = () => {
               <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
                 Portuguese Chicken Poutine from Ma Poule Mouillée, Montreal <br />
                 Hands down, the best thing I've ever put into my mouth dear god <br /><br />
-                10/10 Fries which were still crispy and crunchy after being soaked in gravy for like 15 mins. How? <br />
-                10/10 Gravy, very meaty and flavorful, could turn any dish into a 10/10 <br />
-                08/10 Cheese Curds, my dude, I loved the curds, I don't know why this isn't 10/10 <br /> 
-                10/10 Chicken, If they sold just the chicken this meal would've still been 10/10 <br />
+                <strong>10/10 Fries:</strong> Which were still crispy and crunchy after being soaked in gravy for like 15 mins. How? <br />
+                <strong>10/10 Gravy:</strong> Very meaty and flavorful, could turn any dish into a 10/10 <br />
+                <strong>08/10 Cheese Curds:</strong> My dude, I loved the curds, I don't know why this isn't 10/10 <br /> 
+                <strong>10/10 Chicken:</strong> If they sold just the chicken this meal would've still been 10/10 <br /> <br />
                 I would kill a man to have some, please go and treat yourself <br />
               </Typography>
               {/* Google Maps Location */}
