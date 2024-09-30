@@ -14,13 +14,10 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
   Tabs,
   Tab,
+  LinearProgress,
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
 import SnowboardingIcon from '@mui/icons-material/Snowboarding';
@@ -155,6 +152,153 @@ const AboutMe = () => {
               </Card>
             </Grid>
           </Grid>
+        </Grid>
+      </Grid>
+      <Divider sx={{ my: 4 }} />
+
+      {/* Athletic Pursuits Section */}
+      <Typography variant="h5" gutterBottom>
+        Athletic Pursuits
+      </Typography>
+      <Grid container spacing={4} sx={{ mb: 4 }}>
+        {/* Volleyball */}
+        <Grid item xs={12} sm={6}>
+          <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <CardMedia
+              component="img"
+              height="200"
+              image="https://example.com/volleyball_image.jpg" // Replace with a relevant image URL
+              alt="Volleyball"
+            />
+            <CardContent sx={{ flexGrow: 1 }}>
+              {/* Header with Icon and Sport Name */}
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <SportsVolleyballIcon color="secondary" sx={{ mr: 1 }} />
+                <Typography variant="h6">Volleyball</Typography>
+              </Box>
+
+              {/* Position */}
+              <Typography variant="subtitle1" gutterBottom>
+                Position: Setter
+              </Typography>
+
+              {/* Skills */}
+              <Typography variant="body1" gutterBottom>
+                Skills:
+              </Typography>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Setting</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={90}
+                  color="secondary" // Use the theme's secondary color
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Serving</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={80}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Spiking</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={75}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Blocking</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={70}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+
+              {/* Best Play */}
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
+                Best Play: 2019 City Finals MVP
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        {/* Snowboarding */}
+        <Grid item xs={12} sm={6}>
+          <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <CardMedia
+              component="img"
+              height="200"
+              image="https://example.com/snowboarding_image.jpg" // Replace with a relevant image URL
+              alt="Snowboarding"
+            />
+            <CardContent sx={{ flexGrow: 1 }}>
+              {/* Header with Icon and Sport Name */}
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <SnowboardingIcon color="secondary" sx={{ mr: 1 }} />
+                <Typography variant="h6">Snowboarding</Typography>
+              </Box>
+
+              {/* Favorite Resort */}
+              <Typography variant="subtitle1" gutterBottom>
+                Favorite Resort: Whistler Blackcomb
+              </Typography>
+
+              {/* Skills */}
+              <Typography variant="body1" gutterBottom>
+                Skills:
+              </Typography>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Speed</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={85}
+                  color="secondary" // Use the theme's secondary color
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Jumps</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={80}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Tricks</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={75}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Carving</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={80}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+
+              {/* Signature Trick */}
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
+                Signature Trick: Frontside 360
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
       </Grid>
       <Divider sx={{ my: 4 }} />
