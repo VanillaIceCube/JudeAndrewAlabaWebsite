@@ -104,15 +104,15 @@ const AboutMe = () => {
         <Grid item xs={12}>
           <Grid container spacing={2}>
             {/* KBBQ */}
-            <Grid item xs={12} sm={4}>
-              <Card>
+            <Grid item xs={12} sm={4} sx={{ display: 'flex', flexDirection: 'column' }}>
+              <Card sx={{ height: '100%' }}>
                 <CardMedia
                   component="img"
                   height="140"
                   image="https://cloudfront-us-east-1.images.arcpublishing.com/pmn/WQS5BGVCHZATLDQOQ6XOKTGLAM.jpg"
                   alt="Korean BBQ"
                 />
-                <CardContent>
+                <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h6">2. Korean BBQ</Typography>
                   <Typography variant="body2" color="text.secondary">
                     KBBQ (AYCEKBBQ) is about friends and family. It's an experience and more fun with the people you love around you. Also bonus points to Gaja for having a cool robot that delivers the meat to your table!
@@ -121,15 +121,15 @@ const AboutMe = () => {
               </Card>
             </Grid>
             {/* California Burrito */}
-            <Grid item xs={12} sm={4}>
-              <Card>
+            <Grid item xs={12} sm={4} sx={{ display: 'flex', flexDirection: 'column' }}>
+              <Card sx={{ height: '100%' }}>
                 <CardMedia
                   component="img"
                   height="140"
                   image="https://sliceofjess.com/wp-content/uploads/2022/01/IMG_7177.jpg"
                   alt="California Burrito"
                 />
-                <CardContent>
+                <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h6">3. California Burrito</Typography>
                   <Typography variant="body2" color="text.secondary">
                     The burrito has fries inside of it.
@@ -138,15 +138,15 @@ const AboutMe = () => {
               </Card>
             </Grid>
             {/* Sushi */}
-            <Grid item xs={12} sm={4}>
-              <Card>
+            <Grid item xs={12} sm={4} sx={{ display: 'flex', flexDirection: 'column' }}>
+              <Card sx={{ height: '100%' }}>
                 <CardMedia
                   component="img"
                   height="140"
                   image="https://fox5sandiego.com/wp-content/uploads/sites/15/2019/07/sushi.jpg?w=1280"
                   alt="Sushi"
                 />
-                <CardContent>
+                <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h6">4. Sushi</Typography>
                   <Typography variant="body2" color="text.secondary">
                     Jesus Christ I love a good roll. My fav basic rolls include salmon skin, otherwise I love eel.
