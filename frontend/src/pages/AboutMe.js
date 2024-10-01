@@ -5,35 +5,18 @@ import {
   Grid,
   Avatar,
   Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Box,
   Paper,
   Card,
   CardContent,
   CardMedia,
-  Tabs,
-  Tab,
   LinearProgress,
 } from '@mui/material';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
 import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
 import SnowboardingIcon from '@mui/icons-material/Snowboarding';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
 
 const AboutMe = () => {
-  const [hobbyTab, setHobbyTab] = React.useState(0);
-
-  const handleHobbyTabChange = (event, newValue) => {
-    setHobbyTab(newValue);
-  };
-
   return (
     <Container maxWidth="md" sx={{ mt: 4 }}>
       {/* Header Section */}
@@ -342,6 +325,59 @@ const AboutMe = () => {
             </CardContent>
           </Card>
         </Grid>
+      </Grid>
+      <Divider sx={{ my: 4 }} />
+
+      {/* Favorite Quotes Section */}
+      <Typography variant="h5" gutterBottom>
+        Words to Live By
+      </Typography>
+      <Grid container spacing={2} sx={{ mb: 4 }}>
+        {[
+          {
+            text: 'Success is not final, failure is not fatal: It is the courage to continue that counts.',
+            author: 'Winston Churchill',
+          },
+          {
+            text: "The most important step a man can take is the next one.",
+            author: 'Dalinar Kholin',
+          },
+          {
+            text: "We don't need the memories.",
+            author: 'Inarizaki Team Banner',
+          },
+          {
+            text: "A thing isn't beautiful because it lasts.",
+            author: 'Vision',
+          },
+        ].map((quote, index) => (
+          <Grid item xs={12} sm={6} key={index}>
+            <Paper
+              elevation={3}
+              sx={{
+                p: 3,
+                position: 'relative',
+                height: '100%',
+              }}
+            >
+              <FormatQuoteIcon
+                sx={{
+                  fontSize: 40,
+                  opacity: 0.1,
+                  position: 'absolute',
+                  top: 8,
+                  left: 8,
+                }}
+              />
+              <Typography variant="h6" sx={{ fontStyle: 'italic', mt: 2 }}>
+                "{quote.text}"
+              </Typography>
+              <Typography variant="subtitle1" align="right" sx={{ mt: 2 }}>
+                - {quote.author}
+              </Typography>
+            </Paper>
+          </Grid>
+        ))}
       </Grid>
       <Divider sx={{ my: 4 }} />
 
