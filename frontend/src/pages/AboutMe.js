@@ -50,10 +50,10 @@ const AboutMe = () => {
           or whatever you'd like to call me idk
         </Typography>
         <Typography variant="subtitle1" color="text.secondary" sx={{ mt: 2 }}>
-          Food Enjoyer | Aspiring Volleyballer | Cosmere Fanatic
+          Food Enjoyer | Person who plays Sports | Cosmere Nerd
         </Typography>
       </Box>
-      <Divider sx={{ my: 4 }} />
+      <Divider sx={{ my: 2 }} />
 
       {/* Favorite Foods Section */}
       <Typography variant="h5" gutterBottom>
@@ -158,7 +158,7 @@ const AboutMe = () => {
 
       {/* Athletic Pursuits Section */}
       <Typography variant="h5" gutterBottom>
-        Athletic Pursuits
+        Athletic Endeavors
       </Typography>
       <Grid container spacing={4} sx={{ mb: 4 }}>
         {/* Volleyball */}
@@ -167,30 +167,28 @@ const AboutMe = () => {
             <CardMedia
               component="img"
               height="200"
-              image="https://example.com/volleyball_image.jpg" // Replace with a relevant image URL
+              image="https://media.istockphoto.com/id/1318409220/vector/volleyball-player-serving-ball-isolated-vector-silhouette-side-view.jpg?s=612x612&w=0&k=20&c=rdiQcdOvoKnbDeWkfXlYLW7eqvK7C-6RqydN0IsrPoQ="
               alt="Volleyball"
             />
             <CardContent sx={{ flexGrow: 1 }}>
               {/* Header with Icon and Sport Name */}
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                 <SportsVolleyballIcon color="secondary" sx={{ mr: 1 }} />
-                <Typography variant="h6">Volleyball</Typography>
+                <Typography variant="h6">Beach Volleyball</Typography>
               </Box>
+              <Divider sx={{ mb: 1.5 }} />
 
-              {/* Position */}
               <Typography variant="subtitle1" gutterBottom>
-                Position: Setter
+                Prestiege: 2nd Place @ Volo Doubles Tournament
               </Typography>
 
               {/* Skills */}
-              <Typography variant="body1" gutterBottom>
-                Skills:
-              </Typography>
+              <Divider sx={{ mb: 1.5 }} />
               <Box sx={{ mb: 1 }}>
                 <Typography variant="body2">Setting</Typography>
                 <LinearProgress
                   variant="determinate"
-                  value={90}
+                  value={70}
                   color="secondary" // Use the theme's secondary color
                   sx={{ height: 10, borderRadius: 5 }}
                 />
@@ -208,7 +206,7 @@ const AboutMe = () => {
                 <Typography variant="body2">Spiking</Typography>
                 <LinearProgress
                   variant="determinate"
-                  value={75}
+                  value={60}
                   color="secondary"
                   sx={{ height: 10, borderRadius: 5 }}
                 />
@@ -217,7 +215,25 @@ const AboutMe = () => {
                 <Typography variant="body2">Blocking</Typography>
                 <LinearProgress
                   variant="determinate"
-                  value={70}
+                  value={80}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Receiving</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={50}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Throwing myself after the ball when all hope is lost</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={95}
                   color="secondary"
                   sx={{ height: 10, borderRadius: 5 }}
                 />
@@ -225,7 +241,10 @@ const AboutMe = () => {
 
               {/* Best Play */}
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-                Best Play: 2019 City Finals MVP
+                Locations: <br />
+                <strong style={{ textDecoration: 'underline' }}>West Coast:</strong> Ocean Beach, Harry West Gym
+                <br />
+                <strong style={{ textDecoration: 'underline' }}>East Coast:</strong> Revolutions Bowling
               </Typography>
             </CardContent>
           </Card>
@@ -237,7 +256,7 @@ const AboutMe = () => {
             <CardMedia
               component="img"
               height="200"
-              image="https://example.com/snowboarding_image.jpg" // Replace with a relevant image URL
+              image="https://t3.ftcdn.net/jpg/01/81/24/80/360_F_181248077_4XDBOplAeSlKlCM7CPcr5D27t6HrGFkA.jpg"
               alt="Snowboarding"
             />
             <CardContent sx={{ flexGrow: 1 }}>
@@ -246,21 +265,18 @@ const AboutMe = () => {
                 <SnowboardingIcon color="secondary" sx={{ mr: 1 }} />
                 <Typography variant="h6">Snowboarding</Typography>
               </Box>
+              <Divider sx={{ mb: 1.5 }} />
 
-              {/* Favorite Resort */}
               <Typography variant="subtitle1" gutterBottom>
-                Favorite Resort: Whistler Blackcomb
+                Prestiege: I once did a big jump and didn't die
               </Typography>
+              <Divider sx={{ mb: 1.5 }} />
 
-              {/* Skills */}
-              <Typography variant="body1" gutterBottom>
-                Skills:
-              </Typography>
               <Box sx={{ mb: 1 }}>
                 <Typography variant="body2">Speed</Typography>
                 <LinearProgress
                   variant="determinate"
-                  value={85}
+                  value={70}
                   color="secondary" // Use the theme's secondary color
                   sx={{ height: 10, borderRadius: 5 }}
                 />
@@ -269,7 +285,7 @@ const AboutMe = () => {
                 <Typography variant="body2">Jumps</Typography>
                 <LinearProgress
                   variant="determinate"
-                  value={80}
+                  value={60}
                   color="secondary"
                   sx={{ height: 10, borderRadius: 5 }}
                 />
@@ -278,7 +294,7 @@ const AboutMe = () => {
                 <Typography variant="body2">Tricks</Typography>
                 <LinearProgress
                   variant="determinate"
-                  value={75}
+                  value={15}
                   color="secondary"
                   sx={{ height: 10, borderRadius: 5 }}
                 />
@@ -287,7 +303,25 @@ const AboutMe = () => {
                 <Typography variant="body2">Carving</Typography>
                 <LinearProgress
                   variant="determinate"
-                  value={80}
+                  value={75}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Endurance</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={85}
+                  color="secondary"
+                  sx={{ height: 10, borderRadius: 5 }}
+                />
+              </Box>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2">Waking up at 4AM to be on the first chair</Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={95}
                   color="secondary"
                   sx={{ height: 10, borderRadius: 5 }}
                 />
@@ -295,7 +329,15 @@ const AboutMe = () => {
 
               {/* Signature Trick */}
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-                Signature Trick: Frontside 360
+                Locations:
+                <br />
+                <strong style={{ textDecoration: 'underline' }}>West Coast / Western U.S. & Canada:</strong> Whistler Blackcomb, Mammoth Mountain, Big Bear, Snow Valley, Snow Summit, Stevens Pass
+                <br />
+                <strong style={{ textDecoration: 'underline' }}>Rocky Mountains / Colorado:</strong> Breckenridge, Vail, Keystone
+                <br />
+                <strong style={{ textDecoration: 'underline' }}>Northeast U.S.:</strong> Stowe, Mount Snow, Okemo, Hunter Mountain, Crotched Mountain
+                <br />
+                <strong style={{ textDecoration: 'underline' }}>Southern New England (Connecticut):</strong> Mount Southington, Ski Sundown, Mohawk Mountain
               </Typography>
             </CardContent>
           </Card>
