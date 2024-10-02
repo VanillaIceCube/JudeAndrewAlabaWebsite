@@ -33,7 +33,7 @@ const AboutMe = () => {
           or whatever you'd like to call me idk
         </Typography>
         <Typography variant="subtitle1" color="text.secondary" sx={{ mt: 2 }}>
-          Food Enjoyer | Person who plays Sports | Cosmere Nerd
+          Food Enjoyer | Aspiring Athlete | Cosmere Nerd
         </Typography>
       </Box>
       <Divider sx={{ my: 2 }} />
