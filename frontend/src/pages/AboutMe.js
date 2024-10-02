@@ -330,7 +330,7 @@ const AboutMe = () => {
 
       {/* Favorite Quotes Section */}
       <Typography variant="h5" gutterBottom>
-        Words to Live By
+        Words to live by! (Some more out of context than others)
       </Typography>
       <Grid container spacing={2} sx={{ mb: 4 }}>
         {[
